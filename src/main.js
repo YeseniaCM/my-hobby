@@ -1,4 +1,4 @@
-import './scss/style.scss'
+import './sscss/style.sscss'
 import { printHomepage } from './homePage';
 import { printimagesBoxes } from './imageBoxes';
 import { menuToggle } from './toggleMenu';
