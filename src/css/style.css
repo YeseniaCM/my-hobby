@@ -94,3 +94,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.container{
+  background-color: #213547;
+}
+
+.image-map{
+  height: 100px;
+  width: 300px;
+  background-color: #646cff8e;
+}
