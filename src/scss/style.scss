@@ -120,3 +120,49 @@ button:focus-visible {
 .visible{
   display: block;
 }
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+nav.open{
+  background: lightblue;
+}
+
+nav:not(.open) {
+  @include visually-hidden;
+}
+
+.toggleMenu{
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: #fff;
+  background: transparent;
+  span {
+    display: block;
+    background: #000;
+    width: 35px;
+    height: 4px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: all 0.4s ease-in-out;
+  }
+  &.open {
+    span:nth-child(2) {
+      display: none;
+    }
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
