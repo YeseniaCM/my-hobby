@@ -26,6 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -105,4 +106,17 @@ button:focus-visible {
   width: 300px;
   background-color: #646cff8e;
   margin: 10px;
+}
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visible{
+  display: block;
 }
