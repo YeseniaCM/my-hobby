@@ -104,7 +104,8 @@ button:focus-visible {
   width: 300px;
   background-color: #646cff8e;
 }
-.hidden {
+
+@mixin visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
