@@ -31,12 +31,43 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Merriweather';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+p{
+  font-size: 1.05em;
+}
+  h1 {
+      font-size: 2.3em;
+  }
+    h2 {
+      font-size: 1.8rem; 
+      font-family: 'Merriweather sans';
+  }
+    h3 {
+      font-size: 1.5em; 
+      font-family: 'Merriweather sans';
+  }
+    h4 {
+      font-size: 1.25em; 
+      font-family: 'Merriweather sans';
+  }
+    h5 {
+      font-size: 1rem; 
+      font-family: 'Merriweather sans';
+  }
+    h6 {
+          font-size: 0.8em; 
+          font-family: 'Merriweather sans';
+      }
+
+li, ul{
+  list-style: none;
 }
 
-#app {
+.app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -105,16 +136,6 @@ button:focus-visible {
   background-color: #646cff8e;
 }
 
-@mixin visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .visible{
   display: block;
 }
@@ -129,13 +150,23 @@ button:focus-visible {
 }
 
 nav.open{
-  background: lightblue;
+  background: rgba(173, 216, 230, 0.432);
+  position: absolute;
+  top: 35px;
+  left: 10px;
 }
 
 nav:not(.open) {
   @include visually-hidden;
 }
-
+.menu-container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 20px;
+  left: 10px;
+}
 .toggleMenu{
   border-radius: 8px;
   border: 0;
