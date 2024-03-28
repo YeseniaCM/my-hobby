@@ -66,6 +66,11 @@ p{
 li, ul{
   list-style: none;
 }
+
+img{
+  height: auto;
+  width: 100%;
+}
       
 .app {      
   max-width: 1280px;
@@ -128,14 +133,23 @@ button:focus-visible {
 }
 .container{
   background-color: #213547;
-  padding: 10px 0;;
+  // padding: 10px 0;;
 }
 
 .image-map{
-  height: 100px;
-  width: 300px;
+  // height: 100px;
+  // width: 300px;
   background-color: #646cff8e;
   margin: 10px;
+}
+.imageBoxOne{
+  // background: url('../images/IMG_7156.JPG') center/100%;
+}
+.imageBoxTwo{
+  background-color: #414721;
+}
+.imageBoxThree{
+  background-color: #47213a;
 }
 
 .visible{
