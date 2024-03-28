@@ -55,7 +55,7 @@ export function printimagesBoxes () {
         imageBox.classList.add('image-map');
         imageBox.classList.add(imageBoxClasses[index]); 
         imageBox.appendChild(backgroundImages[index]);
-        const textElement = document.createElement('div');
+        const textElement = document.createElement('h4');
         textElement.textContent = boxTexts[index];
         imageBox.appendChild(textElement);
         imageBox.addEventListener('click', () => handleClick(index));
