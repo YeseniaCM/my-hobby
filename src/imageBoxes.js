@@ -19,6 +19,12 @@ export function printimagesBoxes () {
         // "imageBoxThree"
     ];
 
+    const boxTexts = [
+        "Unik text för box 1",
+        "Unik text för box 2",
+        // "Unik text för box 3"
+    ];
+
     const backgroundImages = [
         createImage('src/images/IMG_7057.JPG', 'Bildbeskrivning 1'),
         createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 2'),
@@ -48,8 +54,10 @@ export function printimagesBoxes () {
         const imageBox = document.createElement('div');
         imageBox.classList.add('image-map');
         imageBox.classList.add(imageBoxClasses[index]); 
-        imageBox.textContent = "Heej";
         imageBox.appendChild(backgroundImages[index]);
+        const textElement = document.createElement('div');
+        textElement.textContent = boxTexts[index];
+        imageBox.appendChild(textElement);
         imageBox.addEventListener('click', () => handleClick(index));
         container.appendChild(imageBox);
     });
