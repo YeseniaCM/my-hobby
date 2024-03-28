@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -75,7 +79,7 @@ img{
 .app {      
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4.5rem 2rem 2rem 2rem;
   text-align: center;
 }
 
