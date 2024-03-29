@@ -1,7 +1,15 @@
 import { container } from "./main.js"
+import { showSlideshow } from "./slideShow.js";
 
 const galleri = document.querySelector('#galleri');
 galleri.addEventListener('click', printimagesBoxes)
+
+function createImage(src, alt) {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    return img;
+}
 
 export function printimagesBoxes () {
     container.innerHTML = '';
@@ -31,15 +39,8 @@ export function printimagesBoxes () {
     const backgroundImages = [
         createImage('src/images/IMG_7057.JPG', 'Bildbeskrivning 1'),
         createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 2'),
-        createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 3')
+        // createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 3')
     ];
-
-    function createImage(src, alt) {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = alt;
-        return img;
-    }
 
     function handleClick(clickedIndex) {
         imageBoxs.forEach((imageBoxs, index) => {
@@ -68,13 +69,19 @@ export function printimagesBoxes () {
     app.appendChild(container)
 }
 
-function imageBoxOne(imageBox, backgroundImage){
+const boxImages = [
+    createImage(['src/images/IMG_7057.JPG', 'Bildbeskrivning 1', 'src/images/IMG_7058.JPG', 'Bildbeskrivning 1', 'src/images/IMG_7059.JPG','Bildbeskrivning 1']),
+    createImage(['src/images/IMG_7057.JPG', 'Bildbeskrivning 1', 'src/images/IMG_7058.JPG', 'Bildbeskrivning 1', 'src/images/IMG_7059.JPG','Bildbeskrivning 1']),
+];
+
+function imageBoxOne(imageBox){
+    showSlideshow([boxImages])
     imageBox.appendChild(document.createTextNode("Klickade på box 1"));
     console.log('klick på box 1');
 }
 
-function imageBoxTwo(id){
-    console.log('klick på box 2', id);
+function imageBoxTwo(){
+    console.log('klick på box 2');
 }
 
 // function imageBoxThree(id){
