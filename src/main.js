@@ -5,6 +5,4 @@ import { menuToggle } from './toggleMenu';
 
 export let container = document.createElement('div');
 container.classList.add('container');
-printimagesBoxes()
-
-// printHomepage()
+printHomepage()
