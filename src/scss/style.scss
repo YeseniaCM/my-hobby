@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #312a20;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -181,11 +181,18 @@ button:focus-visible {
 }
 
 nav.open{
-  margin: 10px 0 0 20px;
-  padding: 0;
+  margin: -44px 0 0 -10px;
+  padding: 47px 50px 0 50px;
+  height: 18vh;
+  background: linear-gradient(310deg,#ac9475ea,#110d05);
+  color: #ffffff;
+  font-family: 'roboto';
+  font-weight: bold;
+  border-radius: 0px 5px 5px 0;
 
   li{
-    margin: 10px;
+    margin-top: 20px;
+    cursor: pointer;
   }
 
 }
@@ -204,7 +211,7 @@ nav:not(.open) {
   background: transparent;
   span {
     display: block;
-    background: #000;
+    background: #917c62;
     width: 35px;
     height: 4px;
     border-radius: 4px;
