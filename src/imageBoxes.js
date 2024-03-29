@@ -1,5 +1,8 @@
 import { container } from "./main.js"
 
+const galleri = document.querySelector('#galleri');
+galleri.addEventListener('click', printimagesBoxes)
+
 export function printimagesBoxes () {
     container.innerHTML = '';
 
