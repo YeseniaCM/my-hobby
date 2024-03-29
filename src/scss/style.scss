@@ -65,6 +65,8 @@ p{
 
 li, ul{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
       
 .app {      
@@ -111,7 +113,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  // outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -138,6 +140,14 @@ button:focus-visible {
   margin: 10px;
 }
 
+.menu-container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  left: 10px;
+}
+
 .visible{
   display: block;
 }
@@ -153,24 +163,18 @@ button:focus-visible {
 }
 
 nav.open{
-  background: lightblue;
+  margin: 10px 0 0 20px;
+  padding: 0;
+
+  li{
+    margin: 10px;
+  }
+
 }
 
 nav:not(.open) {
-  background: rgba(173, 216, 230, 0.432);
-  position: absolute;
-  top: 35px;
-  left: 10px;
   @include visually-hidden;
-}
 
-.menu-container{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 20px;
-  left: 10px;
 }
 
 .toggleMenu{
