@@ -1,3 +1,4 @@
+import { printimagesBoxes } from "./imageBoxes";
 import { container } from "./main";
 
 const home = document.querySelector('#home');
@@ -14,7 +15,12 @@ export function printHomepage() {
     homeContent.classList.add('homeContent')
     homeContent.innerHTML = ` 
     <img src="./src/images/IMG_5484.JPG" alt="">
+    <p> Se galleri </p>
     `;
+
+    homeContent.addEventListener('click', () =>{
+        printimagesBoxes()
+    })
 
     container.append(homeTitle, homeUnderTitle, homeContent)
     app.append(container)
