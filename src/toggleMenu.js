@@ -13,4 +13,12 @@ function toggleMenu () {
     } else {
         menuBtn.setAttribute('aria-label', 'Open menu')
     }
+
+    const menuLinks = document.querySelectorAll('#menu li');
+
+    menuLinks.forEach(item => {
+        item.addEventListener('click', () => {
+            toggleMenu(); 
+        });
+    });
 }
