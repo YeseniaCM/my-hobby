@@ -10,14 +10,33 @@ export function printimagesBoxes () {
     const imageBoxs = [
         imageBoxOne,
         imageBoxTwo,
-        imageBoxThree
+        // imageBoxThree
     ];
 
     const imageBoxClasses = [
         "imageBoxOne",
         "imageBoxTwo",
-        "imageBoxThree"
+        // "imageBoxThree"
     ];
+
+    const boxTexts = [
+        "Unik text för box 1",
+        "Unik text för box 2",
+        // "Unik text för box 3"
+    ];
+
+    const backgroundImages = [
+        createImage('src/images/IMG_7057.JPG', 'Bildbeskrivning 1'),
+        createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 2'),
+        createImage('src/images/IMG_5166.JPG', 'Bildbeskrivning 3')
+    ];
+
+    function createImage(src, alt) {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        return img;
+    }
 
     function handleClick(clickedIndex) {
         imageBoxs.forEach((imageBoxs, index) => {
@@ -25,17 +44,20 @@ export function printimagesBoxes () {
             if (index !== clickedIndex) {
                 imageBox.classList.add('hidden');
             } else {
-                imageBox.classList.remove('hidden'); // Visa den klickade boxen
+                imageBox.classList.remove('hidden'); 
             }
         });
-        imageBoxs[clickedIndex]();
+        imageBoxs[clickedIndex](container.querySelector(`.${imageBoxClasses[clickedIndex]}`));
     }
 
     imageBoxs.forEach((imageBoxs, index) => {
         const imageBox = document.createElement('div');
         imageBox.classList.add('image-map');
-        imageBox.classList.add(imageBoxClasses[index]); // Add class based on index
-        imageBox.textContent = "Heej";
+        imageBox.classList.add(imageBoxClasses[index]); 
+        imageBox.appendChild(backgroundImages[index]);
+        const textElement = document.createElement('h4');
+        textElement.textContent = boxTexts[index];
+        imageBox.appendChild(textElement);
         imageBox.addEventListener('click', () => handleClick(index));
         container.appendChild(imageBox);
     });
@@ -43,8 +65,8 @@ export function printimagesBoxes () {
     app.appendChild(container)
 }
 
-function imageBoxOne(){
-       
+function imageBoxOne(imageBox, backgroundImage){
+    imageBox.appendChild(document.createTextNode("Klickade på box 1"));
     console.log('klick på box 1');
 }
 
@@ -52,6 +74,6 @@ function imageBoxTwo(id){
     console.log('klick på box 2', id);
 }
 
-function imageBoxThree(id){
-    console.log('klick på box 3', id);
-}
+// function imageBoxThree(id){
+//     console.log('klick på box 3', id);
+// }
