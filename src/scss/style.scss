@@ -170,6 +170,38 @@ button:focus-visible {
   left: 10px;
 }
 
+.homeContent{
+  // background-color: #213547;
+  position: relative;
+  margin-top: 10px;
+  img{
+    border-radius: 50%;
+    box-shadow: 2px 9px 20px #251f14a2;
+  }
+
+  img:hover{
+    background-color: #5c4b2ba4;
+  }
+
+  // p:hover{
+  //     position: absolute;
+  //     letter-spacing: 2px;
+  //     font-size: 25px;
+  //     text-transform: uppercase;
+  //     text-shadow: 2px 9px 10px #110d05;
+  //     top: 50%; 
+  //     left: 50%; 
+  //     transform: translate(-50%, -50%); 
+  //     margin: 0; 
+  //     padding: 10px 20px;
+  //     background-color: #4f4433c9;
+  //     border-radius: 5px;
+    
+  // }
+  
+}
+
+
 .visible{
   display: block;
 }
